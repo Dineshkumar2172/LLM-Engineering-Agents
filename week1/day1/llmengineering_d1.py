@@ -48,3 +48,13 @@ ed = Website("https://edwarddonner.com")
 print(ed.title)
 print(ed.text)
 
+# Types of prompts
+#       1. system prompt - that tells them what task they are performing and what tone they should use.
+#       2. user prompt - the conversation startedr that they should reply to.
+#
+# For example:
+#       System Prompt: “You are a helpful assistant knowledgeable in technology and programming. Respond in a friendly and informative manner.”
+#       User Prompt: “Can you explain the difference between Python and JavaScript?”
+#       In this example, the system prompt sets the AI’s role and tone, while the user prompt provides the specific question the AI needs to address.
+
+
