@@ -20,6 +20,7 @@
 #     Phi from Microsoft
 #
 # Three ways to use models
+#
 #     1. Chat interfaces like ChatGPT, Claude, Bard
 #     2. Cloud APIs - LLM API (accessing through code instead of chat interface - per API request cost)
 #        Frameworks like Langchain - provides unified interface to access multiple models
@@ -27,3 +28,5 @@
 #     3. Direct inference - downloading model weights and running inference on local machine or cloud VM
 #        With the HuggingFace transformers library, you can run inference on many open-source models
 #        With Ollama to run locally
+
+
