@@ -13,7 +13,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key: raise ValueError("SAGE_TOKEN environment variable not set")
 
-openai = OpenAI()
+# openai = OpenAI()
 class Website:
     def __init__(self, url):
         self.url = url
