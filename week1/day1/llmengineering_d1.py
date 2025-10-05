@@ -99,4 +99,4 @@ def summarize(url):
     response = sage_ai( model = "gpt-4o-mini", messages = messages_for(website) )    
     return response["choices"][0]["message"]["content"]
 
-summarize("https://edwarddonner.com")
+print(summarize("https://edwarddonner.com"))
