@@ -57,4 +57,18 @@ print(ed.text)
 #       User Prompt: “Can you explain the difference between Python and JavaScript?”
 #       In this example, the system prompt sets the AI’s role and tone, while the user prompt provides the specific question the AI needs to address.
 
+# Define our system prompt
+system_prompt = "You are an assistant that analyzes the contents of a website \
+and provides a short summary, ignoring texts that might be navigation related.\
+Respond in markdown."
+
+# A function that writes a user prompt that asks for summaries of websites:
+def user_prompt_for(website):
+    user_prompt = f"you are looking at website titled {website.title}"
+    user_prompt += "The contents of this website is as follows: \
+please provide a short summary of this website in markdown. \
+If it includes news or announcements, then summarize them too. \n\n"
+    user_prompt += website.text
+    return user_prompt
+
 
