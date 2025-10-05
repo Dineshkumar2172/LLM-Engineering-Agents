@@ -56,7 +56,7 @@ print(ed.text)
 #       System Prompt: “You are a helpful assistant knowledgeable in technology and programming. Respond in a friendly and informative manner.”
 #       User Prompt: “Can you explain the difference between Python and JavaScript?”
 #       In this example, the system prompt sets the AI’s role and tone, while the user prompt provides the specific question the AI needs to address.
-
+#
 # Define our system prompt
 system_prompt = "You are an assistant that analyzes the contents of a website \
 and provides a short summary, ignoring texts that might be navigation related.\
@@ -70,5 +70,20 @@ please provide a short summary of this website in markdown. \
 If it includes news or announcements, then summarize them too. \n\n"
     user_prompt += website.text
     return user_prompt
+
+# Messages
+# The API from OpenAI expects to receive messages in a particular structure. Many of the other APIs share this structure
+#
+#       [
+#              {"role": "system", "content": "system message goes here"},
+#              {"role": "user", "content": "user message goes here"}
+#       ]
+#
+# below functions creates exactly the prompt above
+def messages_for(website):
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt_for(website)}
+    ]
 
 
