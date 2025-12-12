@@ -27,7 +27,7 @@ class Website:
 ed = Website("https://edwarddonner.com")
 # print(ed.title)
 # print(ed.text)
-
+#
 # Types of prompts
 #       1. system prompt - that tells them what task they are performing and what tone they should use.
 #       2. user prompt - the conversation startedr that they should reply to.
